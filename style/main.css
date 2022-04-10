@@ -29,6 +29,14 @@ header .container{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+    margin-left: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(20,20,20,.75);
+
+
 }
 
 header .logo{
@@ -39,12 +47,15 @@ header .logo{
 }
 
 
+
 header nav a{
     text-decoration: none;
     color: #fff;
     margin-right: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
+    
+    
+    
     
 
     cursor: pointer;
@@ -56,6 +67,7 @@ header nav a:hover{
 }
 
 
+
 /*filme-principal*/
 
 .filme-principal{
@@ -63,7 +75,7 @@ header nav a:hover{
     background:linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa_good.jpg');
     
 
-    height: 400px;
+    height: 550px;
     
     background-size:cover;
 
@@ -105,6 +117,8 @@ header nav a:hover{
 .botao:hover{
     background-color: white;
     color: black;
+    transform: scale(1.1, 1.1);
+    
 }
 
 .botao i{
@@ -114,6 +128,7 @@ header nav a:hover{
 .container{
 
     margin-left: 20px;
+    
 }
 
 .filme-principal .container{
@@ -144,19 +159,29 @@ header nav a:hover{
     margin-top: 15px;
 }
 
+.carrosel-series{
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.carrosel-filmes{
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
 
 .item:hover{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    z-index: 1;
-    display:inline-block;
-    position: relative;
-    white-space:normal;
-    vertical-align: top;
-    padding: 0 0.2vw;
-    
-    
-  
 
+    width: 100%;
+    height: 100%;
+    
+}
+
+.item{
+    
+    width: 90%;
+    height: 90%;
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+    
 }
